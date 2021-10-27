@@ -7,7 +7,8 @@ const Home = () => {
             <h1 className="title">Three.js tutorial</h1>
             <div className="nav">
                 <Link to="/Cube">Cube</Link>
-                <Link to="/Text">Text</Link>
+                <Link to="/TextItem">Text</Link>
+                <Link to="/Wave">Wave</Link>
             </div>
         </div>
     )

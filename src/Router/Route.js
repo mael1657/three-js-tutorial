@@ -2,7 +2,8 @@ import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import Cube from "../Components/Cube";
 import Home from "../Components/Home";
-import Text from "../Components/Text";
+import TextItem from "../Components/Text";
+import Wave from "../Components/Wave";
 
 const AppRouter = () => {
     return(
@@ -14,8 +15,11 @@ const AppRouter = () => {
                 <Route exact path="/Cube">
                     <Cube/>
                 </Route>
-                <Route exact path="/Text">
-                    <Text/>
+                <Route exact path="/TextItem">
+                    <TextItem/>
+                </Route>
+                <Route exact path="/Wave"> 
+                    <Wave/>
                 </Route>
             </Switch>
         </HashRouter>
