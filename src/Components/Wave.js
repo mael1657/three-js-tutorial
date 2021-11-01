@@ -72,11 +72,14 @@ const Cont = () => {
 
 const Wave = () => {
     return(
-        <Canvas style={{width:"100vw",height:"100vh"}} camera={{fov : 10, position: [0,0,5]}}>
-            <Suspense fallback={null}>
-                <Cont/>
-            </Suspense>
-        </Canvas>
+        <div className="wave-div">
+            <h1>wave example</h1>
+            <Canvas style={{width:"100vw",height:"100vh"}} camera={{fov : 10, position: [0,0,5]}}>
+                <Suspense fallback={null}>
+                    <Cont/>
+                </Suspense>
+            </Canvas>
+        </div>
     )
 }
 
