@@ -8,11 +8,11 @@ const Scene = () => {
     const [hovered, setHover] = useState(false);
 
     
-    const handlerOver = (e) => {
+    const handlerOver = () => {
         setHover(true);
     };
 
-    const handlerOut = (e) => {
+    const handlerOut = () => {
         setHover(false);
     };
 
@@ -21,16 +21,16 @@ const Scene = () => {
         config : config.wobbly
     });
 
+
     const texture = useLoader(THREE.TextureLoader, 'https://cdn.pixabay.com/photo/2013/08/09/05/54/layer-170971_960_720.jpg')
    
     return(
         <animated.mesh 
-            onPointerOver = {(event) => {handlerOver()}}
-            onPointerOut = {(event) => {handlerOut()}}
-            rotation={[0,0,0]}
-            scale = {scale}
+            onPointerOver = {() => {handlerOver()}}
+            onPointerOut = {() => {handlerOut()}}
+            scale={scale}
         >
-            <planeBufferGeometry attach="geometry" args={[3, 5]}/>
+            <planeBufferGeometry attach="geometry" args={[4,6]}/>
             <meshBasicMaterial map={texture}/>
         </animated.mesh>
     );
@@ -40,11 +40,13 @@ const Scene = () => {
 const Hover = () => {
 
     return(
-        <div className="global-div">
+        <div 
+            className="global-div"
+        >
             <Canvas camera = {{fov:75, position:[0,0,7]}}>
                 {/* <ambientLight /> */}
                 <Suspense fallback={null}>
-                    <Scene />
+                    <Scene/>
                 </Suspense>
             </Canvas>
         </div>

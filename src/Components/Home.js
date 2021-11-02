@@ -10,6 +10,7 @@ const Home = () => {
                 <Link to="/TextItem">Text</Link>
                 <Link to="/Wave">Wave</Link>
                 <Link to="/Hover">Hover</Link>
+                <Link to="/MouseMove">MouseMove</Link>
             </div>
         </div>
     )
