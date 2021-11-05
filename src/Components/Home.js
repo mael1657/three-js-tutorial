@@ -11,6 +11,7 @@ const Home = () => {
                 <Link to="/Wave">Wave</Link>
                 <Link to="/Hover">Hover</Link>
                 <Link to="/MouseMove">MouseMove</Link>
+                <Link to="/Scroll">Scroll</Link>
             </div>
         </div>
     )

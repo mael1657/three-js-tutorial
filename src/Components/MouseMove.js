@@ -22,7 +22,8 @@ const MouseMove = () => {
         scale:[1,1,1],
         rotation:[0,0,0],
         config:{mass:10, tension: 1000, friction:300, precision:0.00001}
-    }))
+    }));
+    
     return(
         <div 
             className="global-div"
