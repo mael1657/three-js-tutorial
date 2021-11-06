@@ -1,21 +1,22 @@
 import React, { useRef } from 'react';
 
 const Scroll = () => {
-    let speed = 0;
-    let pos = 0;
+    let y = 0;
+    let position = 0;
     window.addEventListener('wheel',(e) => {
-        speed += e.deltaY*0.003;
+        y += e.deltaY*0.0003;
     })
 
     const ref = useRef()
 
     function raf(){
-        console.log(pos);
-        pos += speed;
-        speed *= 0.8;
+        console.log(position);
+        position += y;
+        y *= 0.8;
         window.requestAnimationFrame(raf);
     }
     raf()
+
     
     
     return(
@@ -23,7 +24,7 @@ const Scroll = () => {
             <div 
             className="box" 
             ref={ref}
-            style={{transform:`translate(0,${pos * 100})px`}}
+            // style={{transform:`translate(0,${pos * 100})px`}}
             ></div>
         </div>
     )
